@@ -10,7 +10,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const SITE_ROOT = path.join(__dirname, "..");
 const PRODUCTS = Object.freeze({
-  "paddy-seeds-1kg": Object.freeze({ id: "paddy-seeds-1kg", name: "Paddy (Dhan) Seeds — 1 kg", amount: 100000 })
+  "paddy-seeds-1kg": Object.freeze({ id: "paddy-seeds-1kg", name: "Paddy (Dhan) Seeds — 1 kg", amount: 100000 }),
+  "wheat-seeds-1kg": Object.freeze({ id: "wheat-seeds-1kg", name: "Wheat (Gehu) Seeds — 1 kg", amount: 100 })
 });
 
 app.use(cors());

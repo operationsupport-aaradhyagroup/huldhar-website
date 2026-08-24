@@ -15,7 +15,7 @@
     if (normalized === "COMPLETED") {
       icon.classList.add("success"); icon.textContent = "✓";
       title.textContent = "Payment successful";
-      message.textContent = "Thank you. Your payment for Paddy (Dhan) Seeds — 1 kg has been confirmed.";
+      message.textContent = "Thank you. Your order payment has been confirmed.";
       retry.hidden = true;
     } else if (["FAILED", "CANCELLED", "EXPIRED"].includes(normalized)) {
       icon.classList.add("failed"); icon.textContent = "×";
