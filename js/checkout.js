@@ -13,6 +13,10 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ productId: "paddy-seeds-1kg" })
       });
+      const contentType = response.headers.get("content-type") || "";
+      if (!contentType.includes("application/json")) {
+        throw new Error("The payment service is temporarily unavailable. Please try again shortly.");
+      }
       const result = await response.json();
       if (!response.ok || !result.redirectUrl) throw new Error(result.message || "Payment could not be started.");
       window.location.assign(result.redirectUrl);
